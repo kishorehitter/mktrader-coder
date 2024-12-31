@@ -1,0 +1,572 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    max-width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+:root {
+    --primary-color: white;
+    --secondary-color: #2ecc71;
+    --font-size-large: 2rem;
+    --font-size-small: 1rem;
+    --bg-image: linear-gradient(rgb(4, 160, 208) rgb(82, 113, 122));
+    --background-color:black;
+  }
+
+  .dm-serif-text-regular {
+    font-family: "DM Serif Text", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  
+  .icon-nav{
+    font-size: 1.2vw !important;
+  }
+  
+    .navbar{
+        position: sticky;
+        background-image: linear-gradient(rgb(0, 0, 4), rgb(6, 186, 218)); 
+    }
+    a.nav-link{
+        margin-left: 2.2vw;
+        font-weight: 500 !important;
+        border-radius: 10px;
+        color: var(--primary-color) !important;
+    }
+    a.nav-link:hover{
+        background-color: white;
+        color:darkblue !important;
+        border-radius: 0.4vw;
+        transition:0.5s ease;
+    }
+main{
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-size: cover; 
+}
+main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 1; 
+}
+main > * {
+    position: relative;
+    z-index: 2; /* Ensures the content is above the overlay */
+    
+}
+
+
+
+           /*Home Section*/
+section#home{ 
+    position: relative;
+    padding-top: 10vh;
+    padding-bottom: 10vh; 
+}
+
+#typewriting{
+    position: relative;
+    z-index: 100;
+    color: white;
+    font-weight: 700;  
+    font-size: 2vw;
+}
+
+div.home{  
+    margin: 0vh 0vh;
+}
+
+    div.profile-img{
+    width: 19vw;  
+    height: 23vw;
+    background-image:url(./images/profile.png);
+    border: 1px solid white;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    box-shadow: 0 0 3px 1px blue(255, 255, 255, 0.8); 
+    animation: pulse 1.5s infinite alternate;
+    
+    }
+    div.profile-img:hover{
+        filter: brightness(1.2);
+    }
+
+    @keyframes pulse {
+        from {
+            box-shadow: 0 0 4px 2px white;
+        }
+        to {
+            box-shadow: 0 0 6px 3px skyblue;
+            border: 1px solid skyblue;
+        }
+    }
+    
+figcaption.animate{
+    display: flex;
+    justify-content: center;
+    
+}
+
+figcaption.animate p{
+    color: purple;
+    font-weight: 900;
+    font-size: 2rem;
+    opacity: 0;
+    animation: text 3s ease-in-out;
+    position: absolute;
+    float: right;
+}
+
+figcaption.animate p:nth-child(1){
+    animation-delay: 0s;
+}
+figcaption.animate p:nth-child(2){
+    animation-delay: 3s;
+}
+figcaption.animate p:nth-child(3){
+    animation-delay: 6s;
+}
+figcaption.animate p:nth-child(4){
+    animation-delay: 9s;
+}
+figcaption.animate p:nth-child(5){
+    animation-delay: 12s;
+}
+
+@keyframes text{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+ #home span.name{
+    font-weight: 900;
+    color: Red;
+    font-size: xx-large;
+}
+
+    /*course section*/
+
+.book{
+    width: 20vw;
+    height: auto;
+    box-shadow: 0 0 3px 1px blue(255, 255, 255, 0.8); 
+    animation: pulse 1.5s infinite alternate;
+}
+section#about{  
+    position: relative;
+    margin: auto;
+       
+}
+.outer-card{
+    width:17vw;
+    height:auto; 
+    border-radius: 2vw;
+    border: 1px solid white;
+    background-color: rgba(4, 160, 208, 0.5);
+}
+.outer-card:hover{
+    filter: brightness(1.2)
+}
+
+div.about-img{
+    
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: auto;
+    margin: auto;
+    z-index: 1;
+   border-radius: 1vw;
+   position: relative;
+}
+.service-image{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 1px;
+    position: relative;
+} 
+.service-image:hover{
+    position: absolute;
+    width: auto;
+}
+
+.my-name{
+    background-color:  white;
+    
+    color: rgb(9, 9, 67);
+    
+}
+
+div.about-img:hover{
+    opacity: 1.0;
+}
+.sur-name{
+    background-color: white;
+    
+    color: rgb(9, 9, 67);
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+div.about{
+    margin:auto;
+    margin-bottom: 0%;
+    font-size: 1.3rem;
+}
+
+div.about p{
+    margin-bottom: 0%;
+}
+button.cv{
+    
+    display: flex;
+    margin: auto;
+    animation-delay: 10s;
+}
+.service-card {
+    perspective: 1000px; 
+    text-align: center;
+   
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+}
+
+.card-3d{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+   
+}
+
+.card-container:hover .card-3d {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    text-indent: 30px;
+}
+
+.front {
+    box-shadow: 1px 1px 10px 1px;
+}
+
+.back {
+    background: #f1f1f1;
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+                /*service Section*/
+
+section#skills{
+   
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    position: relative;
+}
+.show-on-load{
+    display: block;  
+    font-weight: 500;
+    color: black; 
+    font-weight: 600;
+     
+}
+.hide-on-load{
+    display: none;
+}
+
+.card:hover .show-on-load{
+    display: hide;
+    font-size: 0px;
+}
+.card:hover .hide-on-load{
+    display: block;   
+}
+
+div.card{
+    width: 10.5rem;
+    height: 13.5rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+    box-shadow:2px 2px 8px black;
+    background-image: linear-gradient(rgb(22, 195, 22), white);
+}
+
+div.card:hover{
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
+div.card-img-top{
+    cursor: pointer;
+    border-radius: 2px; 
+}
+
+div.skill{
+    width: 90%;
+    height: 30px;   
+    border: 1px solid grey;   
+    border-radius: 0.3vw;
+}
+
+div.range{
+    height: 100%;
+    color: white;
+    font-weight: 900;
+    border-radius: 0.3vw;
+}
+img.skill-card{
+    width: 9.9rem;
+    height: 10rem; 
+    cursor: pointer;
+}  
+
+
+               /* channel Section*/
+
+
+section#projects{ 
+    position: relative;  
+    padding-top: 1vh;  
+}
+
+
+.large-device{
+    width: 90%;
+    height: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+.large-device:hover{
+    transform: scale(1.05);
+}
+
+.medium-device{
+    width: 90%;
+    height: 71%;
+    transition:transform 0.3s ease-in-out;
+}
+
+.medium-device:hover{
+    transform: scale(1.05);  
+}
+.small-device{
+    width: 90%;
+    height: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+.small-device:hover{
+    transform: scale(1.05);   
+}
+
+
+                /*contact section*/
+
+section#contact{
+    padding-top: 5vh;  
+}
+     /*section footer*/
+
+#footer{
+    height: auto;
+    background-image: linear-gradient(rgb(6, 186, 218), rgb(0, 0, 4) ); 
+    bottom: 0%;
+}
+i.bi{
+    font-size: 1.4vw;        
+}
+i bi:hover{
+    cursor: all-scroll;
+    filter: brightness(200%) !important;
+}
+
+ /*media-screen 991px*/
+
+ @media screen and (max-width:991px) {
+
+    section#about{
+   
+        padding-top: 2vh;  
+        padding-bottom: 2vh;  
+    }
+    .book{
+        width: 20vw;
+        height: auto;
+    }
+    #typewriting{
+        font-size: 2.5vw;
+    }
+    .icon-nav{
+        font-size: 2.4vw !important;
+      }
+
+    section#skills{
+        padding-top: 10vh;     
+        position: relative;
+    }
+
+    div.profile-img{     
+      width: 32vw ;
+      height: 40vw;     
+    }
+   
+    div.home{  
+      margin: 10vh 10vh;
+    }
+    div.home p{
+      font-size: 1.5rem !important;
+    }
+     h1.name{
+      margin: auto;
+      margin-top: 0%;  
+     } 
+
+     .outer-card{
+        padding-bottom: 0px;
+        width:35.2vw;
+        height:42.5vw; 
+        margin: auto;   
+    }
+   
+     div.about-img{ 
+      width: 35vw;
+      height: 35vw;
+      margin: auto;  
+     }
+
+     figcaption.animate p{
+      font-size:3vw;
+     }
+     div.card{
+      margin: auto;
+     }
+     .card-row{
+        margin: auto !important;
+     }
+     i.bi{
+        font-size: 2vw;
+        
+    }
+  }
+      /*media-screen 576px*/
+
+  @media screen and (max-width:576px) {
+    section{
+        overflow-x: hidden;
+    }
+    #typewriting{
+        font-size: 4.4vw;
+    }
+    .book{
+        width: 50vw;
+        height: auto;
+    }
+    .icon-nav{
+        font-size: 4.5vw !important;
+      }
+    div.profile-img{     
+      width: 45vw;
+      height: 50vw; 
+      filter: brightness(120%);
+      box-shadow: 0 0 10px 2px blue(255, 255, 255, 0.8);     
+    }
+    section#home{
+      padding-bottom: 3vh; 
+    }
+    div.home{  
+      margin: 0vh 5vh;
+    }
+    div.home p{
+      font-size: 1.5rem !important;
+    }
+   
+     h1.name{
+      margin: auto;
+      margin-top: 0%;    
+     } 
+     .outer-card{
+        padding-bottom: 0%;
+        width:50.2vw;
+        height:auto; 
+        margin: auto;
+        box-shadow: 1px 1px 1px white;  
+    }
+     div.about-img{ 
+      width: 50vw;
+      height: 50vw ;
+      margin: 0%;
+      filter: brightness(120%); 
+     }
+
+     figcaption.animate p{
+      font-size: 4vw;
+     }
+
+     section#skills{
+        margin-top: 0vh;
+        padding-top: 1vh;     
+     }
+     section#contact{
+        padding-top: 0vh;
+     }
+
+     div.card{
+     margin: auto;    
+     }
+
+     .show-on-load{
+        bottom: 0%;
+     }
+     img.skill-card{
+        width: 9.9rem;
+        height: 10rem; 
+        cursor: pointer;
+    }
+    i.bi{
+        font-size: 4vw;
+        
+    }  
+  }
+  
