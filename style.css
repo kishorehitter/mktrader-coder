@@ -92,6 +92,10 @@ section#home{
 div.home{  
     margin: 0vh 0vh;
 }
+iframe{
+    width: 560px;
+    height: 315px;
+}
 
     div.profile-img{
     width: 19vw;  
@@ -567,6 +571,11 @@ i bi:hover{
     i.bi{
         font-size: 4vw;
         
-    }  
+    } 
+    iframe{
+        margin-top: 10px;
+        width: 100%;
+        height: 210px;
+    } 
   }
   
